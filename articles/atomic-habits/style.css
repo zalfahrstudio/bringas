@@ -3153,3 +3153,94 @@ body.dark .case-visual .visual-word {
   inset: 0;
   z-index: 1;
 }
+
+
+
+/* BRINGAS MOBILE REFINEMENT — contrast, infographic flow, icon cleanup */
+@media (max-width: 760px) {
+  .hero {
+    color: #fff;
+    background: #081a2a;
+  }
+  .hero-content,
+  .hero-content .eyebrow,
+  .hero-content .kicker,
+  .hero-content h1,
+  .hero-content .hero-subtitle,
+  .hero-content .author-line,
+  .hero-content .hero-meta {
+    color: #f7fbff;
+  }
+  .hero-content .hero-subtitle { color: #dce8f2; }
+  .hero-content .author-line small,
+  .hero-content .hero-meta { color: #c7d6e3; }
+  .hero-shade {
+    background: linear-gradient(180deg, rgba(5,18,31,.96) 0%, rgba(5,18,31,.88) 58%, rgba(5,18,31,.72) 100%) !important;
+  }
+  .hero-book { opacity: 1; }
+
+  /* On phones, keep the photo as a landscape header and put all six notes
+     in a readable grid below it instead of overlaying tiny text on the photo. */
+  .editorial-figure .habit-visual {
+    aspect-ratio: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #0b2034;
+  }
+  .editorial-figure .habit-background {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+  }
+  .editorial-figure .habit-overlay {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    padding: 10px 12px 14px;
+    background: #0b2034;
+  }
+  .editorial-figure .habit-point {
+    position: static;
+    width: auto;
+    min-width: 0;
+    padding: 13px 7px;
+    gap: 8px;
+    color: #f7fbff;
+    align-items: flex-start;
+  }
+  .editorial-figure .habit-point h3 {
+    margin: 1px 0 5px;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #fff;
+  }
+  .editorial-figure .habit-point p {
+    font-size: 11px;
+    line-height: 1.55;
+    color: #d2dfeb;
+  }
+  .editorial-figure .point-number {
+    width: 27px;
+    min-width: 27px;
+    border-radius: 9px;
+    font-size: 13px;
+    background: #4fd1c5;
+    color: #102a43;
+  }
+}
+@media (max-width: 390px) {
+  .editorial-figure .habit-overlay { padding-inline: 8px; }
+  .editorial-figure .habit-point { padding: 11px 4px; gap: 6px; }
+  .editorial-figure .habit-point h3 { font-size: 11px; }
+  .editorial-figure .habit-point p { font-size: 10px; }
+}
+
+/* Replace decorative emoji glyphs with consistent typographic symbols. */
+.hero-meta span:first-child { white-space: nowrap; }
