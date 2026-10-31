@@ -986,3 +986,30 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = randomArticle.path;
   });
 })();
+document
+  .querySelector('.hero-bottomline a[href="#jelajahi"]')
+  ?.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const footer = document.querySelector(".site-footer");
+    if (!footer) return;
+
+    const startY = window.scrollY;
+    const endY = footer.getBoundingClientRect().top + startY;
+    const distance = endY - startY;
+    const duration = 2200;
+    let startTime = null;
+
+    function animateScroll(timestamp) {
+      if (startTime === null) startTime = timestamp;
+
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      window.scrollTo(0, startY + distance * eased);
+
+      if (progress < 1) requestAnimationFrame(animateScroll);
+    }
+
+    requestAnimationFrame(animateScroll);
+  });
