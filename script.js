@@ -961,3 +961,28 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape" && panel.classList.contains("is-open")) closeMenu();
   });
 })();
+/* Tombol "Mulai membaca": buka satu ringkasan secara acak */
+(() => {
+  const startReadingBtn = document.getElementById("startReadingBtn");
+
+  if (!startReadingBtn || !Array.isArray(articles) || articles.length === 0) {
+    return;
+  }
+
+  startReadingBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const availableArticles = articles.filter(
+      (article) => typeof article.path === "string" && article.path.trim() !== ""
+    );
+
+    if (availableArticles.length === 0) {
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * availableArticles.length);
+    const randomArticle = availableArticles[randomIndex];
+
+    window.location.href = randomArticle.path;
+  });
+})();
