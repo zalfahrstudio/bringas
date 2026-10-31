@@ -3327,5 +3327,43 @@ margin-top: 12px;
   .hero-book .book-caption {
     display: none;
   }
+/* Perbaiki kontras kartu prinsip di bagian gelap */
+.dark-section .concept-grid .concept-card {
+  background: #172232;
+  border: 1px solid #3b4a5c;
+  color: #e8edf4;
+}
+
+.dark-section .concept-grid .concept-card h3 {
+  color: #f7f9fc;
+}
+
+.dark-section .concept-grid .concept-card p {
+  color: #c2ccd8;
+}
+
+.dark-section .concept-grid .concept-card small {
+  color: #ff9478;
+}
+
+.dark-section .concept-grid .concept-symbol {
+  background: #101a29;
+  color: #f7f9fc;
+  border-color: #6b7888;
+}
+
+/* Samakan kontras dua kartu hukum pertama */
+.dark-section .two-step article {
+  background: #172232;
+  border-color: #3b4a5c;
+  color: #e8edf4;
+}
+
+.dark-section .two-step article h3 {
+  color: #f7f9fc;
+}
+
+.dark-section .two-step article p {
+  color: #c2ccd8;
 }
 
