@@ -3244,3 +3244,16 @@ body.dark .case-visual .visual-word {
 
 /* Replace decorative emoji glyphs with consistent typographic symbols. */
 .hero-meta span:first-child { white-space: nowrap; }
+.hero-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-meta-icon {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  color: #4fd1c5;
+}
