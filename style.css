@@ -3185,3 +3185,36 @@ body.mobile-menu-open { overflow:hidden; }
     transition: none;
   }
 }
+/* Panah tombol "Jelajahi semua ringkasan" */
+#libraryMoreBtn .arrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+/* Sembunyikan ikon SVG lama */
+#libraryMoreBtn .arrow-wrap .arrow-icon {
+  display: none !important;
+}
+
+/* Panah ke bawah saat daftar belum dibuka */
+#libraryMoreBtn .arrow-wrap::before {
+  content: "";
+  display: block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2.5px solid currentColor;
+  border-bottom: 2.5px solid currentColor;
+  transform: translateY(-0.15rem) rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+/* Panah ke atas saat daftar sudah dibuka */
+#libraryMoreBtn[aria-expanded="true"] .arrow-wrap::before {
+  transform: translateY(0.15rem) rotate(225deg);
+}
