@@ -534,12 +534,13 @@ function renderArticles() {
   moreBtn.setAttribute("aria-expanded", String(showAllArticles));
 
   // Teks tombol
-  moreBtn.innerHTML = showAllArticles
-    ? 'Tampilkan lebih sedikit <span aria-hidden="true">↑</span>'
-    : hasActiveFilter
-      ? `Lihat semua ${out.length} hasil <span aria-hidden="true">↗</span>`
-      : 'Jelajahi semua ringkasan <span aria-hidden="true">↗</span>';
+const arrow = '<span class="arrow-wrap" aria-hidden="true"></span>';
 
+moreBtn.innerHTML = showAllArticles
+  ? `Tampilkan lebih sedikit ${arrow}`
+  : hasActiveFilter
+    ? `Lihat semua ${out.length} hasil ${arrow}`
+    : `Jelajahi semua ringkasan ${arrow}`;
   // Deskripsi tombol
   moreNote.textContent = showAllArticles
     ? "Kamu sedang melihat seluruh koleksi yang sesuai."
