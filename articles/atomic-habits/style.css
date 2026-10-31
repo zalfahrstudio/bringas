@@ -3416,4 +3416,40 @@ margin-top: 12px;
     color: #102a43 !important;
     border-color: #9ebdbb !important;
   }
+/* Perbaikan kontras kartu prinsip — mode gelap khusus mobile */
+@media (max-width: 768px) {
+  body.dark .concept-card {
+    background: #f7f3e8;
+    border-color: #d8cbb5;
+    color: #172126;
+  }
+
+  body.dark .concept-card summary strong,
+  body.dark .concept-card .concept-body b {
+    color: #172126;
+  }
+
+  body.dark .concept-card summary small,
+  body.dark .concept-card .concept-body small {
+    color: #a65335;
+  }
+
+  body.dark .concept-card .concept-body p {
+    color: #46515b;
+  }
+
+  body.dark .concept-card .expand {
+    color: #46515b;
+  }
+
+  body.dark .concept-card .concept-symbol {
+    background: #dce9e5;
+    color: #173b3b;
+    border: 1px solid #b7cbc5;
+  }
+
+  body.dark .concept-card .example-box {
+    background: #eee8da;
+    color: #27343b;
+  }
 }
