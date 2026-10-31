@@ -3285,4 +3285,29 @@ object-fit: contain;
 .hero-book .book-caption {
 margin-top: 12px;
 }
+}@media (max-width: 767px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    padding-bottom: 36px;
+  }
+
+  .hero-book {
+    position: relative;
+    inset: auto;
+    width: min(78vw, 340px);
+    margin: 28px auto 0;
+    transform: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .book-cover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
 }
