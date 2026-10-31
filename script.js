@@ -997,14 +997,14 @@ document
     const startY = window.scrollY;
     const endY = footer.getBoundingClientRect().top + startY;
     const distance = endY - startY;
-    const duration = 2200;
+    const duration = 8000;
     let startTime = null;
 
     function animateScroll(timestamp) {
       if (startTime === null) startTime = timestamp;
 
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
+      const eased = progress * progress * (3 - 2 * progress);
 
       window.scrollTo(0, startY + distance * eased);
 
