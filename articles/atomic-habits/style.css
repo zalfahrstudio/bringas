@@ -3257,3 +3257,24 @@ body.dark .case-visual .visual-word {
   flex: 0 0 17px;
   color: #4fd1c5;
 }
+@media (max-width: 700px) {
+  .hero-book {
+    position: relative;
+    inset: auto;
+    width: min(62vw, 250px);
+    max-width: 250px;
+    margin: 36px auto 0;
+    transform: none;
+  }
+
+  .book-cover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .book-caption {
+    text-align: center;
+  }
+}
