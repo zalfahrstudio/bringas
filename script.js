@@ -991,13 +991,10 @@ document
   ?.addEventListener("click", function (event) {
     event.preventDefault();
 
-    const footer = document.querySelector(".site-footer");
-    if (!footer) return;
-
     const startY = window.scrollY;
-    const endY = footer.getBoundingClientRect().top + startY;
+    const endY = document.documentElement.scrollHeight - window.innerHeight;
     const distance = endY - startY;
-    const duration = 60000; // 60 detik
+    const duration = 180000; // 180 detik
     let startTime = null;
 
     function animateScroll(timestamp) {
@@ -1005,7 +1002,7 @@ document
 
       const progress = Math.min((timestamp - startTime) / duration, 1);
 
-      // Gerakan konstan dan sangat perlahan
+      // Linear: kecepatan scroll tetap dari awal sampai akhir
       window.scrollTo(0, startY + distance * progress);
 
       if (progress < 1) {
