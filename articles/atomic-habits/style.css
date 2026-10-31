@@ -3366,30 +3366,7 @@ margin-top: 12px;
 .dark-section .two-step article p {
   color: #c2ccd8;
 }
-@media (max-width: 768px) {
-  body.dark #prinsip .two-step article,
-  body.dark #prinsip .concept-card {
-    background: #f7f3e8 !important;
-    border-color: #d9cfb9 !important;
-    color: #263244 !important;
-  }
-
-  body.dark #prinsip .two-step article h3,
-  body.dark #prinsip .concept-card h3,
-  body.dark #prinsip .concept-card summary strong {
-    color: #172232 !important;
-  }
-
-  body.dark #prinsip .two-step article p,
-  body.dark #prinsip .concept-card p,
-  body.dark #prinsip .concept-card .concept-body p {
-    color: #4b5563 !important;
-  }
-
-  body.dark #prinsip .two-step article small,
-  body.dark #prinsip .concept-card summary small {
-    color: #bd5f43 !important;
-  }
+/* Kontras kartu contoh sehari-hari — mode gelap mobile */
 @media (max-width: 768px) {
   body.dark #contoh .concept-card {
     background: #f7f3e8 !important;
@@ -3398,7 +3375,8 @@ margin-top: 12px;
   }
 
   body.dark #contoh .concept-card h3,
-  body.dark #contoh .concept-card strong {
+  body.dark #contoh .concept-card strong,
+  body.dark #contoh .concept-card b {
     color: #172232 !important;
   }
 
@@ -3408,48 +3386,16 @@ margin-top: 12px;
 
   body.dark #contoh .concept-card small,
   body.dark #contoh .concept-card .concept-label {
-    color: #bd5f43 !important;
+    color: #a65335 !important;
   }
 
-  body.dark #contoh .concept-symbol {
-    background: #dff8f3 !important;
-    color: #102a43 !important;
-    border-color: #9ebdbb !important;
-  }
-/* Perbaikan kontras kartu prinsip — mode gelap khusus mobile */
-@media (max-width: 768px) {
-  body.dark .concept-card {
-    background: #f7f3e8;
-    border-color: #d8cbb5;
-    color: #172126;
+  body.dark #contoh .concept-card .concept-symbol {
+    background: #dce9e5 !important;
+    color: #173b3b !important;
+    border-color: #b7cbc5 !important;
   }
 
-  body.dark .concept-card summary strong,
-  body.dark .concept-card .concept-body b {
-    color: #172126;
-  }
-
-  body.dark .concept-card summary small,
-  body.dark .concept-card .concept-body small {
-    color: #a65335;
-  }
-
-  body.dark .concept-card .concept-body p {
-    color: #46515b;
-  }
-
-  body.dark .concept-card .expand {
-    color: #46515b;
-  }
-
-  body.dark .concept-card .concept-symbol {
-    background: #dce9e5;
-    color: #173b3b;
-    border: 1px solid #b7cbc5;
-  }
-
-  body.dark .concept-card .example-box {
-    background: #eee8da;
-    color: #27343b;
+  body.dark #contoh .concept-card .expand {
+    color: #46515b !important;
   }
 }
