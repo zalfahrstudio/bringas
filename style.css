@@ -3157,3 +3157,28 @@ body.mobile-menu-open { overflow:hidden; }
 .topic-card .topic-arrow::before {content:none !important;display:none !important}
 .topic-card .topic-arrow .arrow-icon {display:block;width:22px;height:22px}
 @media(max-width:760px){.topic-card .topic-arrow{margin-top:8px}.proof-avatars{gap:4px}}
+/* Mobile: satu ikon panah premium pada tombol Jelajahi ringkasan */
+@media (max-width: 768px) {
+  .btn[href="#semua-artikel"] .arrow-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .btn[href="#semua-artikel"] .arrow-wrap::before,
+  .btn[href="#semua-artikel"] .arrow-wrap::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .btn[href="#semua-artikel"] .arrow-icon {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 auto;
+  }
+}
