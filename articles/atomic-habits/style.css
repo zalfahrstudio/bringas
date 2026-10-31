@@ -3283,7 +3283,7 @@ body.dark .case-visual .visual-word {
     position: relative;
     margin: 28px auto 36px;
     width: min(68vw, 280px);
-    transform: translateY(-100px);
+    transform: translateY(-150px);
     z-index: 2;
   }
 
