@@ -3218,3 +3218,46 @@ body.mobile-menu-open { overflow:hidden; }
 #libraryMoreBtn[aria-expanded="true"] .arrow-wrap::before {
   transform: translateY(0.15rem) rotate(225deg);
 }
+/* Hamburger tampil di desktop dan mobile */
+.mobile-menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--navy);
+}
+
+.hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 20px;
+}
+
+.hamburger-lines i {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-lines i:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .hamburger-lines i:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* Beri ruang agar tombol tidak terlalu mepet di header desktop */
+@media (min-width: 761px) {
+  .header-actions {
+    gap: 12px;
+  }
+}
