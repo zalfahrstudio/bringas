@@ -997,18 +997,20 @@ document
     const startY = window.scrollY;
     const endY = footer.getBoundingClientRect().top + startY;
     const distance = endY - startY;
-    const duration = 8000;
+    const duration = 60000; // 60 detik
     let startTime = null;
 
     function animateScroll(timestamp) {
       if (startTime === null) startTime = timestamp;
 
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      const eased = progress * progress * (3 - 2 * progress);
 
-      window.scrollTo(0, startY + distance * eased);
+      // Gerakan konstan dan sangat perlahan
+      window.scrollTo(0, startY + distance * progress);
 
-      if (progress < 1) requestAnimationFrame(animateScroll);
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
     }
 
     requestAnimationFrame(animateScroll);
