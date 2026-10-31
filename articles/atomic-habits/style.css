@@ -3307,3 +3307,20 @@ body.dark .case-visual .visual-word {
     transform: none !important;
   }
 }
+/* iPhone 12 Pro Max — hero Atomic Habits */
+@media screen and (max-width: 430px) {
+  .hero-book {
+    width: min(78vw, 330px);
+    margin: 24px auto 0;
+    position: relative;
+    top: -48px;
+    transform: none;
+  }
+
+  .hero-book .book-cover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
