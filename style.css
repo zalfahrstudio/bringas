@@ -3463,6 +3463,110 @@ body.mobile-menu-open { overflow:hidden; }
     margin-top: 15px;
     border-radius: 12px;
   }
+  /* Label "Buku" — editorial, bukan ikon */
+.path-steps .path-step-toggle {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #102a43;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.path-steps .path-step-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 11px;
+  border: 1px solid #c7ebe4;
+  border-radius: 999px;
+  background: #e5f8f4;
+  color: #087f78;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.path-steps .path-step-copy {
+  min-width: 0;
+  text-align: left;
+}
+
+.path-steps .path-step-copy strong,
+.path-steps .path-step-copy b {
+  display: block;
+  margin: 1px 0 7px;
+  color: #102a43;
+  font-size: 19px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.path-steps .path-step-copy span {
+  display: block;
+  margin: 0;
+  color: #5a6f7e;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: left;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* Hilangkan sisa styling panah */
+.path-steps .path-arrow {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .path-steps {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .path-steps .path-step {
+    padding: 17px;
+    border-radius: 17px;
+  }
+
+  .path-steps .path-step-toggle {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .path-steps .path-step-label {
+    min-height: 27px;
+    padding-inline: 9px;
+    font-size: 10px;
+  }
+
+  .path-steps .path-step-copy strong,
+  .path-steps .path-step-copy b {
+    font-size: 17px;
+  }
+
+  .path-steps .path-step-copy span {
+    font-size: 14px;
+  }
+
+  .path-steps .path-step > .path-detail-image,
+  .path-steps .path-step > .js-zoom-image {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 12px;
+  }
 }
 
 
