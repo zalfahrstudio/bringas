@@ -3826,7 +3826,67 @@ body.mobile-menu-open { overflow:hidden; }
     height: 30px;
     flex-basis: 30px;
   }
+  /* Desktop polish: BRINGAS digital product */
+@media (min-width: 701px) {
+  .digital-product {
+    padding: 88px 32px;
+    background:
+      radial-gradient(ellipse at 85% 20%, rgba(79, 209, 197, 0.13), transparent 38%),
+      #f7f8f5;
+  }
+
+  .digital-product-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+    gap: clamp(48px, 7vw, 96px);
+    max-width: 1120px;
+  }
+
+  .digital-product-copy {
+    max-width: 500px;
+  }
+
+  .digital-product-eyebrow {
+    margin-bottom: 20px;
+    letter-spacing: 0.18em;
+  }
+
+  .digital-product-copy h2 {
+    max-width: 480px;
+    font-size: clamp(40px, 4.2vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .digital-product-copy p {
+    max-width: 460px;
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  .digital-product-cta {
+    min-height: 58px;
+    padding: 0 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(16, 42, 67, 0.14);
+  }
+
+  .digital-product-visual {
+    padding: 18px;
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(16, 42, 67, 0.13);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .digital-product-visual:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 70px rgba(16, 42, 67, 0.17);
+  }
+
+  .digital-product-visual img {
+    aspect-ratio: 4 / 3;
+  }
 }
+
 
 
 
