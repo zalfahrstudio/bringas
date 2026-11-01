@@ -3307,4 +3307,54 @@ body.mobile-menu-open { overflow:hidden; }
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+.path-step {
+  display: block;
 }
+
+.path-step-toggle {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px;
+}
+
+.path-step-copy {
+  min-width: 0;
+}
+
+.path-step-copy strong,
+.path-step-copy span {
+  display: block;
+}
+
+.path-step-copy strong {
+  margin-bottom: 10px;
+}
+
+.path-step-copy span {
+  line-height: 1.7;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.path-step .js-zoom-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 22px;
+  border-radius: 16px;
+  cursor: zoom-in;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .path-step-toggle {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .path-step .js-zoom-image {
+    margin-top: 16px;
+  }
+}
+
