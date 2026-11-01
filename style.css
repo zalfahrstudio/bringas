@@ -3943,14 +3943,6 @@ a.btn.btn-primary .arrow-icon {
   font-size: 16px;
   line-height: 1;
 }
-
-/* Pastikan CTA tetap rapi di layar kecil */
-@media (max-width: 700px) {
-  .hero-product-link {
-    width: fit-content;
-    max-width: 100%;
-    padding: 11px 14px;
-  }
 }
 
 
