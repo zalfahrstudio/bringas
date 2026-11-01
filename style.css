@@ -3634,7 +3634,34 @@ body.mobile-menu-open { overflow:hidden; }
 .hero-copy .hero-cta {
   margin-top: 24px;
 }
+/* Hero: naikkan konten kiri dan rapikan jarak */
+.hero {
+  align-items: center;
+}
 
+.hero-content {
+  align-self: center;
+  transform: translateY(-28px);
+}
+
+.hero-content .hero-kicker {
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  margin-bottom: 24px;
+  line-height: 1.75;
+}
+
+@media (max-width: 700px) {
+  .hero-content {
+    transform: none;
+  }
 }
 
 
