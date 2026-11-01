@@ -3982,6 +3982,68 @@ a.btn.btn-primary .arrow-icon {
     height: 16px;
     flex: 0 0 16px;
   }
+  /* Desktop saja: perkecil gambar dan panah pada kartu produk digital */
+@media (min-width: 701px) {
+.hero-digital-product {
+grid-template-columns: 68px minmax(0, 1fr);
+gap: 14px;
+width: 100%;
+max-width: 430px;
+padding: 14px;
+}
+.hero-product-image {
+display: block;
+width: 68px;
+max-width: 68px;
+aspect-ratio: 4 / 5;
+overflow: hidden;
+}
+.hero-product-image img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.hero-product-link {
+gap: 6px;
+}
+.hero-product-link svg {
+width: 12px !important;
+height: 12px !important;
+min-width: 12px;
+flex: 0 0 12px;
+}
+  /* Desktop saja: perkecil gambar dan panah pada kartu produk digital */
+@media (min-width: 701px) {
+.hero-digital-product {
+grid-template-columns: 68px minmax(0, 1fr);
+gap: 14px;
+width: 100%;
+max-width: 430px;
+padding: 14px;
+}
+.hero-product-image {
+display: block;
+width: 68px;
+max-width: 68px;
+aspect-ratio: 4 / 5;
+overflow: hidden;
+}
+.hero-product-image img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.hero-product-link {
+gap: 6px;
+}
+.hero-product-link svg {
+width: 12px !important;
+height: 12px !important;
+min-width: 12px;
+flex: 0 0 12px;
+}
 }
 
 
