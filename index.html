@@ -362,32 +362,91 @@
           >
         </div>
         <div class="path-steps">
-          <div class="path-step">
-            <span>01</span>
-            <div>
-              <b>Temukan</b>
-              <p>Kenali masalah atau rasa ingin tahu yang sedang kamu punya.</p>
-            </div>
-            <span class="path-arrow"><svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-          <div class="path-step">
-            <span>02</span>
-            <div>
-              <b>Pahami</b>
-              <p>
-                Ambil konsep utama, bukan hanya kutipan yang terdengar keren.
-              </p>
-            </div>
-            <span class="path-arrow"><svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
-          <div class="path-step">
-            <span>03</span>
-            <div>
-              <b>Praktikkan</b>
-              <p>Pilih satu langkah kecil yang realistis untuk dicoba.</p>
-            </div>
-            <span class="path-arrow"><svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </div>
+
+  <article class="path-step">
+    <button class="path-step-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="path-detail-1">
+      <span class="path-number">01</span>
+      <span class="path-step-copy">
+        <b>Temukan</b>
+        <span>Kenali masalah atau rasa ingin tahu yang sedang kamu punya.</span>
+      </span>
+      <span class="path-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </span>
+    </button>
+
+    <div class="path-step-detail" id="path-detail-1" hidden>
+      <p>Mulai dari satu pertanyaan yang benar-benar ingin kamu pahami.</p>
+      <img class="path-detail-image"
+           src="assets/infografis-temukan.png"
+           alt="Infografis langkah Temukan"
+           loading="lazy">
+    </div>
+  </article>
+
+  <article class="path-step">
+    <button class="path-step-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="path-detail-2">
+      <span class="path-number">02</span>
+      <span class="path-step-copy">
+        <b>Pahami</b>
+        <span>Ambil konsep utama, bukan hanya kutipan yang terdengar keren.</span>
+      </span>
+      <span class="path-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </span>
+    </button>
+
+    <div class="path-step-detail" id="path-detail-2" hidden>
+      <p>Cari inti gagasan, pahami konteksnya, lalu hubungkan dengan realitasmu.</p>
+      <img class="path-detail-image"
+           src="assets/infografis-pahami.png"
+           alt="Infografis langkah Pahami"
+           loading="lazy">
+    </div>
+  </article>
+
+  <article class="path-step">
+    <button class="path-step-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="path-detail-3">
+      <span class="path-number">03</span>
+      <span class="path-step-copy">
+        <b>Praktikkan</b>
+        <span>Pilih satu langkah kecil yang realistis untuk dicoba.</span>
+      </span>
+      <span class="path-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </span>
+    </button>
+
+    <div class="path-step-detail" id="path-detail-3" hidden>
+      <p>Mulai dengan rencana sederhana dan tujuan yang jelas—bukan asal nekat.</p>
+      <img class="path-detail-image"
+           src="assets/infografis-praktikkan.png"
+           alt="Infografis langkah Praktikkan"
+           loading="lazy">
+    </div>
+  </article>
+
+</div>
+
+<dialog class="path-image-modal" id="pathImageModal">
+  <button class="path-image-close" type="button" aria-label="Tutup gambar">×</button>
+  <img id="pathImageLarge" src="" alt="">
+</dialog>
         </div>
       </section>
 
