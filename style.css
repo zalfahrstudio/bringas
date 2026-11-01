@@ -3886,5 +3886,23 @@ a.btn.btn-primary .arrow-icon {
   height: 18px !important;
   flex: 0 0 18px;
 }
+  /* Batasi ukuran ikon panah CTA produk digital */
+.hero-product-link svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  display: block;
+}
 
+/* Jangan biarkan aturan SVG global membesarkan panah CTA */
+.hero-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-product-link svg path {
+  vector-effect: non-scaling-stroke;
+}
+}
 
