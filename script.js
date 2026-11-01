@@ -1012,18 +1012,6 @@ document
 
     requestAnimationFrame(animateScroll);
   });
-// Buka-tutup detail setiap path step
-document.querySelectorAll(".path-step-toggle").forEach((button) => {
-  button.addEventListener("click", () => {
-    const detailId = button.getAttribute("aria-controls");
-    const detail = document.getElementById(detailId);
-    const isOpen = button.getAttribute("aria-expanded") === "true";
-
-    button.setAttribute("aria-expanded", String(!isOpen));
-    detail.hidden = isOpen;
-  });
-});
-
 // Perbesar gambar saat PNG diklik
 const imageModal = document.getElementById("pathImageModal");
 const largeImage = document.getElementById("pathImageLarge");
