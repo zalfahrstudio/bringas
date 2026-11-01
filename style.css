@@ -3881,6 +3881,10 @@ body.mobile-menu-open { overflow:hidden; }
     height: 16px !important;
     flex-basis: 16px;
   }
+a.btn.btn-primary .arrow-icon {
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px;
 }
 
 
