@@ -3866,6 +3866,21 @@ body.mobile-menu-open { overflow:hidden; }
     max-width: 150px;
     aspect-ratio: 16 / 9;
   }
+/* Kecilkan panah pada tombol hero */
+.hero-cta .arrow-icon {
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px;
+  stroke-width: 1.8;
+}
+
+/* Pastikan ukuran tetap proporsional di layar kecil */
+@media (max-width: 700px) {
+  .hero-cta .arrow-icon {
+    width: 16px !important;
+    height: 16px !important;
+    flex-basis: 16px;
+  }
 }
 
 
