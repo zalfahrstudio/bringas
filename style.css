@@ -3459,4 +3459,76 @@ body.mobile-menu-open { overflow:hidden; }
     width: 96vw;
     padding: 0.6rem;
   }
+/* Override layout path-step lama */
+.path-step {
+  display: block;
+  padding: 0;
+  border-bottom: 1px solid var(--line, #dce5e7);
+}
+
+.path-step > span:first-child {
+  font-size: inherit;
+}
+
+.path-step-toggle {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) 2rem;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.25rem 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.path-step-copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.path-step-copy b {
+  font-size: 14px;
+  color: var(--navy, #102a43);
+}
+
+.path-step-copy > span {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted, #718096);
+}
+
+.path-step-detail[hidden] {
+  display: none;
+}
+
+.path-step-detail {
+  padding: 0 0 1.5rem 3.5rem;
+}
+
+.path-step-detail p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.path-detail-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+  cursor: zoom-in;
+}
+
+@media (max-width: 600px) {
+  .path-step-toggle {
+    grid-template-columns: 2rem minmax(0, 1fr) 1.75rem;
+    gap: 0.75rem;
+  }
+
+  .path-step-detail {
+    padding-left: 0;
+  }
 }
