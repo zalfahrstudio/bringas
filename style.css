@@ -3732,6 +3732,42 @@ body.mobile-menu-open { overflow:hidden; }
     padding: 17px;
     border-radius: 16px;
   }
+  /* Desktop: kartu produk digital lebih proporsional */
+@media (min-width: 701px) {
+  .hero-digital-product {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 18px;
+    max-width: 540px;
+    padding: 18px;
+  }
+
+  /* Link/pembungkus gambar */
+  .hero-digital-product .hero-product-image {
+    display: block;
+    width: 88px;
+    height: 112px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  /* Gambar produk di dalam link */
+  .hero-digital-product .hero-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Panah CTA: kecil dan tidak melebar */
+  .hero-digital-product .hero-product-link svg {
+    display: block;
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px;
+    max-width: 16px;
+    flex: 0 0 16px;
+  }
+}
 }
 
 
