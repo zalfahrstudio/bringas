@@ -3307,56 +3307,7 @@ body.mobile-menu-open { overflow:hidden; }
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.path-step {
-  display: block;
-}
-
-.path-step-toggle {
-  display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 16px;
-}
-
-.path-step-copy {
-  min-width: 0;
-}
-
-.path-step-copy strong,
-.path-step-copy span {
-  display: block;
-}
-
-.path-step-copy strong {
-  margin-bottom: 10px;
-}
-
-.path-step-copy span {
-  line-height: 1.7;
-  overflow-wrap: normal;
-  word-break: normal;
-}
-
-.path-step .js-zoom-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-top: 22px;
-  border-radius: 16px;
-  cursor: zoom-in;
-  object-fit: contain;
-}
-
-@media (max-width: 600px) {
-  .path-step-toggle {
-    grid-template-columns: 32px minmax(0, 1fr) auto;
-    gap: 12px;
-  }
-
-  .path-step .js-zoom-image {
-    margin-top: 16px;
-  }
-  /* BRINGAS — editorial step cards */
+/* BRINGAS — editorial reading path */
 .path-steps {
   display: grid;
   gap: 18px;
@@ -3365,368 +3316,152 @@ body.mobile-menu-open { overflow:hidden; }
   margin-inline: auto;
 }
 
-.path-step {
+.path-steps .path-step {
   display: block;
-  padding: clamp(18px, 3vw, 26px);
-  border: 1px solid rgba(16, 42, 67, 0.10);
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.path-step:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(16, 42, 67, 0.10);
-}
-
-.path-step-toggle {
-  display: grid;
-  grid-template-columns: 36px minmax(0, 1fr) 24px;
-  align-items: start;
-  gap: 14px;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #102a43;
-  text-align: left;
-  cursor: pointer;
-}
-
-.path-step-number {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #dff8f3;
-  color: #087f78;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.path-step-copy {
   min-width: 0;
-}
-
-.path-step-copy strong {
-  display: block;
-  margin: 2px 0 8px;
-  font-size: 19px;
-  line-height: 1.3;
-}
-
-.path-step-copy p,
-.path-step-copy span {
-  display: block;
-  margin: 0;
-  color: #526779;
-  font-size: 15px;
-  line-height: 1.7;
-  text-align: left;
-  overflow-wrap: normal;
-  word-break: normal;
-}
-
-.path-arrow {
-  margin-top: 8px;
-  color: #168f89;
-}
-
-.path-step > .js-zoom-image,
-.path-step > .path-detail-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 280px;
-  margin-top: 20px;
-  border-radius: 14px;
-  object-fit: cover;
-  object-position: center;
-  cursor: zoom-in;
-}
-
-/* Jangan tampilkan panel detail lama di bawah kartu */
-.path-step-detail {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  .path-step {
-    padding: 18px;
-    border-radius: 17px;
-  }
-
-  .path-step-toggle {
-    grid-template-columns: 30px minmax(0, 1fr) 20px;
-    gap: 11px;
-  }
-
-  .path-step-number {
-    width: 30px;
-    height: 30px;
-  }
-
-  .path-step-copy strong {
-    font-size: 17px;
-  }
-
-  .path-step-copy p,
-  .path-step-copy span {
-    font-size: 14px;
-  }
-
-  .path-step > .js-zoom-image,
-  .path-step > .path-detail-image {
-    margin-top: 16px;
-    max-height: none;
-  }
-/* BRINGAS — designed step cards */
-.path-steps {
-  display: grid;
-  gap: 22px;
-  width: 100%;
-  max-width: 560px;
-  margin-inline: auto;
-}
-
-.path-step {
+  padding: clamp(20px, 3vw, 28px);
   overflow: hidden;
-  padding: 22px;
-  border: 1px solid #d8e9e5;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #ffffff 0%, #f5fbf9 100%);
-  box-shadow: 0 10px 26px rgba(16, 42, 67, 0.07);
+  border: 1px solid rgba(16, 42, 67, 0.09);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.055);
 }
 
-.path-step-toggle {
+/* Reset tampilan tombol bawaan browser */
+.path-steps .path-step-toggle {
   appearance: none;
+  -webkit-appearance: none;
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) 24px;
+  grid-template-columns: 38px minmax(0, 1fr) 24px;
   align-items: start;
-  gap: 14px;
+  gap: 15px;
   width: 100%;
+  margin: 0;
   padding: 0;
   border: 0;
   border-radius: 0;
   background: transparent;
+  box-shadow: none;
   color: #102a43;
   font: inherit;
   text-align: left;
   cursor: pointer;
 }
 
-.path-step-number {
+.path-steps .path-step-number {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid #b8e8df;
-  border-radius: 13px;
-  background: #dff8f3;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #c7ebe4;
+  border-radius: 12px;
+  background: #e5f8f4;
   color: #087f78;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
-.path-step-copy {
+.path-steps .path-step-copy {
   display: block;
   min-width: 0;
+  text-align: left;
 }
 
-.path-step-copy strong,
-.path-step-copy b {
+.path-steps .path-step-copy b,
+.path-steps .path-step-copy strong {
   display: block;
-  margin: 2px 0 8px;
+  margin: 1px 0 7px;
   color: #102a43;
   font-size: 19px;
   font-weight: 750;
   line-height: 1.3;
 }
 
-.path-step-copy span {
+.path-steps .path-step-copy span {
   display: block;
   margin: 0;
-  color: #526779;
-  font-size: 15px;
+  color: #5a6f7e;
+  font-size: 14px;
   line-height: 1.75;
   text-align: left;
   overflow-wrap: normal;
   word-break: normal;
 }
 
-.path-arrow {
+.path-steps .path-arrow {
   display: grid;
   place-items: center;
   width: 26px;
   height: 26px;
-  margin-top: 4px;
+  margin-top: 3px;
   border-radius: 50%;
-  background: #e8f7f3;
+  background: #f0f8f6;
   color: #168f89;
 }
 
-.path-step > .path-detail-image,
-.path-step > .js-zoom-image {
+/* Gambar tampil langsung di bawah teks */
+.path-steps .path-step > .path-detail-image,
+.path-steps .path-step > .js-zoom-image {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 290px;
-  margin-top: 20px;
-  border: 1px solid #e2ece8;
-  border-radius: 14px;
-  object-fit: cover;
-  object-position: center;
+  margin: 20px 0 0;
+  border: 1px solid #e4ece9;
+  border-radius: 15px;
+  background: #f7faf9;
+  object-fit: contain;
   cursor: zoom-in;
 }
 
-.path-step-toggle:hover .path-step-number {
-  background: #c9f1e9;
+/* Panel detail lama tetap tersembunyi jika masih digunakan */
+.path-steps .path-step-detail[hidden] {
+  display: none !important;
 }
 
-.path-step-toggle:focus-visible {
+.path-steps .path-step-toggle:hover .path-step-number {
+  background: #d5f3ed;
+}
+
+.path-steps .path-step-toggle:focus-visible {
   outline: 3px solid #4fd1c5;
   outline-offset: 5px;
 }
 
 @media (max-width: 600px) {
-  .path-step {
-    padding: 18px;
-    border-radius: 17px;
-  }
-
-  .path-step-toggle {
-    grid-template-columns: 34px minmax(0, 1fr) 22px;
-    gap: 11px;
-  }
-
-  .path-step-number {
-    width: 32px;
-    height: 32px;
-    border-radius: 11px;
-  }
-
-  .path-step-copy strong,
-  .path-step-copy b {
-    font-size: 17px;
-  }
-
-  .path-step-copy span {
-    font-size: 14px;
-  }
-
-  .path-step > .path-detail-image,
-  .path-step > .js-zoom-image {
-    margin-top: 16px;
-    max-height: none;
-  }
-/* BRINGAS — premium step heading */
-.path-steps .path-step .path-step-toggle {
-  appearance: none !important;
-  -webkit-appearance: none !important;
-  display: grid !important;
-  grid-template-columns: 42px minmax(0, 1fr) 28px !important;
-  align-items: start !important;
-  gap: 16px !important;
-  width: 100% !important;
-  padding: 0 0 20px !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  color: #102a43 !important;
-  font: inherit !important;
-  text-align: left !important;
-  cursor: pointer;
-}
-
-.path-steps .path-step .path-step-number {
-  display: grid !important;
-  place-items: center !important;
-  width: 38px !important;
-  height: 38px !important;
-  border: 1px solid #b8e8df !important;
-  border-radius: 12px !important;
-  background: #dff8f3 !important;
-  color: #087f78 !important;
-  font-size: 13px !important;
-  font-weight: 800 !important;
-}
-
-.path-steps .path-step .path-step-copy {
-  display: block !important;
-  min-width: 0 !important;
-  text-align: left !important;
-}
-
-.path-steps .path-step .path-step-copy strong,
-.path-steps .path-step .path-step-copy b {
-  display: block !important;
-  margin: 2px 0 8px !important;
-  color: #102a43 !important;
-  font-size: 20px !important;
-  font-weight: 750 !important;
-  line-height: 1.3 !important;
-  text-align: left !important;
-}
-
-.path-steps .path-step .path-step-copy span {
-  display: block !important;
-  margin: 0 !important;
-  color: #526779 !important;
-  font-size: 15px !important;
-  line-height: 1.75 !important;
-  text-align: left !important;
-  overflow-wrap: normal !important;
-  word-break: normal !important;
-}
-
-.path-steps .path-step .path-arrow {
-  display: grid !important;
-  place-items: center !important;
-  width: 28px !important;
-  height: 28px !important;
-  margin: 4px 0 0 !important;
-  border-radius: 50% !important;
-  background: #e8f7f3 !important;
-  color: #168f89 !important;
-}
-
-.path-steps .path-step {
-  padding: 24px !important;
-  border: 1px solid #d8e9e5 !important;
-  border-radius: 20px !important;
-  background: linear-gradient(145deg, #fff, #f5fbf9) !important;
-  box-shadow: 0 10px 26px rgba(16, 42, 67, .07) !important;
-}
-
-.path-steps .path-step > .path-detail-image,
-.path-steps .path-step > .js-zoom-image {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  margin-top: 0 !important;
-  border: 1px solid #e2ece8 !important;
-  border-radius: 14px !important;
-  object-fit: contain !important;
-  cursor: zoom-in;
-}
-
-@media (max-width: 600px) {
-  .path-steps .path-step .path-step-toggle {
-    grid-template-columns: 34px minmax(0, 1fr) 24px !important;
-    gap: 12px !important;
-    padding-bottom: 16px !important;
+  .path-steps {
+    gap: 14px;
   }
 
   .path-steps .path-step {
-    padding: 18px !important;
+    padding: 18px;
+    border-radius: 18px;
   }
 
-  .path-steps .path-step .path-step-copy strong,
-  .path-steps .path-step .path-step-copy b {
-    font-size: 18px !important;
+  .path-steps .path-step-toggle {
+    grid-template-columns: 32px minmax(0, 1fr) 22px;
+    gap: 11px;
+  }
+
+  .path-steps .path-step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  .path-steps .path-step-copy b,
+  .path-steps .path-step-copy strong {
+    font-size: 17px;
+  }
+
+  .path-steps .path-step-copy span {
+    font-size: 14px;
+  }
+
+  .path-steps .path-step > .path-detail-image,
+  .path-steps .path-step > .js-zoom-image {
+    margin-top: 15px;
+    border-radius: 12px;
   }
 }
 
