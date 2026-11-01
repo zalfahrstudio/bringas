@@ -3903,5 +3903,54 @@ a.btn.btn-primary .arrow-icon {
 .hero-product-link svg path {
   vector-effect: non-scaling-stroke;
 }
+  /* CTA produk digital: tombol ringkas dengan ikon panah kecil */
+.hero-product-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 11px 16px;
+  border: 1px solid rgba(8, 127, 120, 0.22);
+  border-radius: 12px;
+  background: #e4f8f3;
+  color: #087f78;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
+
+.hero-product-link:hover {
+  background: #d2f1e9;
+  color: #102a43;
+  transform: translateY(-1px);
+}
+
+/* Batasi ukuran ikon jika CTA memakai SVG */
+.hero-product-link svg {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px;
+  flex: 0 0 16px;
+  display: block;
+}
+
+/* Jika panahnya berupa span, bukan SVG */
+.hero-product-link > span {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Pastikan CTA tetap rapi di layar kecil */
+@media (max-width: 700px) {
+  .hero-product-link {
+    width: fit-content;
+    max-width: 100%;
+    padding: 11px 14px;
+  }
+}
+
 
