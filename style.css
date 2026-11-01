@@ -3954,7 +3954,35 @@ a.btn.btn-primary .arrow-icon {
   .hero-digital-product {
     max-width: 500px;
   }
+  /* Desktop: batasi kartu dan gambar produk digital */
+@media (min-width: 701px) {
+  .hero-digital-product {
+    grid-template-columns: 88px minmax(0, 1fr);
+    align-items: center;
+    max-width: 460px;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .hero-product-image {
+    width: 88px;
+    max-width: 88px;
+    aspect-ratio: 3 / 4;
+  }
+
+  .hero-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-product-link svg {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+  }
 }
-}
+
 
 
