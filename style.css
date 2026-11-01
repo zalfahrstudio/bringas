@@ -3943,6 +3943,18 @@ a.btn.btn-primary .arrow-icon {
   font-size: 16px;
   line-height: 1;
 }
+  /* Perkecil gambar produk digital hanya di desktop */
+@media (min-width: 701px) {
+  .hero-product-image {
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+  }
+
+  .hero-digital-product {
+    max-width: 500px;
+  }
+}
 }
 
 
