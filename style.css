@@ -3567,6 +3567,45 @@ body.mobile-menu-open { overflow:hidden; }
     margin-top: 15px;
     border-radius: 12px;
   }
+.path-steps .path-step-toggle {
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+
+.path-steps .path-step-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c5ebe4;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #e8faf6, #d6f3ec);
+  color: #11877f;
+}
+
+.path-steps .path-step-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 600px) {
+  .path-steps .path-step-toggle {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .path-steps .path-step-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+  }
+
+  .path-steps .path-step-icon svg {
+    width: 19px;
+    height: 19px;
+  }
 }
 
 
