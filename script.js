@@ -1012,3 +1012,41 @@ document
 
     requestAnimationFrame(animateScroll);
   });
+// Buka-tutup detail setiap path step
+document.querySelectorAll(".path-step-toggle").forEach((button) => {
+  button.addEventListener("click", () => {
+    const detailId = button.getAttribute("aria-controls");
+    const detail = document.getElementById(detailId);
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!isOpen));
+    detail.hidden = isOpen;
+  });
+});
+
+// Perbesar gambar saat PNG diklik
+const imageModal = document.getElementById("pathImageModal");
+const largeImage = document.getElementById("pathImageLarge");
+const closeImageButton = document.querySelector(".path-image-close");
+
+document.querySelectorAll(".path-detail-image").forEach((image) => {
+  image.addEventListener("click", () => {
+    largeImage.src = image.src;
+    largeImage.alt = image.alt;
+    imageModal.showModal();
+  });
+});
+
+closeImageButton.addEventListener("click", () => {
+  imageModal.close();
+});
+
+imageModal.addEventListener("click", (event) => {
+  if (event.target === imageModal) {
+    imageModal.close();
+  }
+});
+
+imageModal.addEventListener("close", () => {
+  largeImage.src = "";
+});
