@@ -3619,4 +3619,109 @@ body.mobile-menu-open { overflow:hidden; }
   .path-detail-image {
     aspect-ratio: 16 / 10;
   }
+/* BRINGAS — step cards: text first, image below */
+.path-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  width: min(100% - 32px, 920px);
+  margin-inline: auto;
+}
+
+.path-step {
+  display: block;
+  min-width: 0;
+  padding: clamp(22px, 4vw, 36px);
+  border: 1px solid rgba(16, 42, 67, 0.12);
+  border-radius: 22px;
+  background: var(--surface, #fff);
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
+}
+
+.path-step-toggle {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.path-step-copy {
+  min-width: 0;
+}
+
+.path-step-copy h3,
+.path-step-copy strong {
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.path-step-copy p {
+  margin: 0;
+  max-width: 65ch;
+  line-height: 1.75;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.path-arrow {
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+.path-step-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+  line-height: 1.75;
+}
+
+.path-step-detail p {
+  margin: 0;
+  max-width: 72ch;
+}
+
+.path-step-detail img,
+.path-step-detail .path-detail-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 16px;
+  background: #f4f6f5;
+}
+
+@media (max-width: 600px) {
+  .path-steps {
+    width: calc(100% - 28px);
+    gap: 16px;
+  }
+
+  .path-step {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .path-step-toggle {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .path-step-copy p {
+    line-height: 1.7;
+  }
+
+  .path-step-detail {
+    margin-top: 18px;
+    gap: 14px;
+  }
 }
