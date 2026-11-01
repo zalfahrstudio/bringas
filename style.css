@@ -3854,7 +3854,7 @@ body.mobile-menu-open { overflow:hidden; }
     margin-top: 11px;
     font-size: 12px;
   }
-}
+
 
 @media (max-width: 360px) {
   .hero-digital-product {
@@ -3873,8 +3873,7 @@ body.mobile-menu-open { overflow:hidden; }
   flex: 0 0 18px;
   stroke-width: 1.8;
 }
-
-/* Pastikan ukuran tetap proporsional di layar kecil */
+  /* Pastikan ukuran tetap proporsional di layar kecil */
 @media (max-width: 700px) {
   .hero-cta .arrow-icon {
     width: 16px !important;
