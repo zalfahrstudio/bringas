@@ -3732,6 +3732,140 @@ body.mobile-menu-open { overflow:hidden; }
     padding: 17px;
     border-radius: 16px;
   }
+/* BRINGAS digital product card */
+.hero-digital-product {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 560px;
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid rgba(16, 42, 67, 0.1);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.07);
+}
+
+.hero-product-image {
+  display: block;
+  width: 112px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 13px;
+  background: #e5f4f0;
+}
+
+.hero-product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-product-copy {
+  min-width: 0;
+}
+
+.hero-product-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #168f89;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+.hero-product-copy h3 {
+  margin: 0 0 8px;
+  color: #102a43;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.3;
+}
+
+.hero-product-copy p {
+  margin: 0;
+  color: #5a6f7e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.hero-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 14px;
+  color: #087f78;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.hero-product-link svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  transition: transform 180ms ease;
+}
+
+.hero-product-link:hover svg {
+  transform: translateX(3px);
+}
+
+.hero-product-link:focus-visible {
+  outline: 2px solid #4fd1c5;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .hero-digital-product {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 22px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .hero-product-image {
+    width: 76px;
+    border-radius: 10px;
+  }
+
+  .hero-product-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.07em;
+  }
+
+  .hero-product-copy h3 {
+    font-size: 16px;
+  }
+
+  .hero-product-copy p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .hero-product-link {
+    gap: 7px;
+    margin-top: 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-digital-product {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-product-image {
+    width: 100%;
+    max-width: 150px;
+    aspect-ratio: 16 / 9;
+  }
 }
 
 
