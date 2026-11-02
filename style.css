@@ -4098,6 +4098,56 @@ body.mobile-menu-open { overflow:hidden; }
     right: 20px;
     bottom: 20px;
   }
+.digital-product-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 18px 26px;
+  border-radius: 18px;
+  background: #102a43;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.digital-product-cart,
+.digital-product-arrow {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: #4fd1c5;
+}
+
+.digital-product-cart svg {
+  width: 30px;
+  height: 30px;
+}
+
+.digital-product-arrow {
+  width: 24px;
+  height: 24px;
+}
+
+.digital-product-label {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .digital-product-cta {
+    gap: 12px;
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .digital-product-cart svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .digital-product-arrow {
+    width: 21px;
+    height: 21px;
+  }
 }
 }
 
